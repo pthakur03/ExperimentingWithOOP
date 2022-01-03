@@ -1,10 +1,5 @@
-"""
-Georgia Institute of Technology - CS1301
-Homework 08 - Object Oriented Programming
-"""
 
 class Mario:
-
     def __init__(self, name):
         self.name = name
         self.lives = 3
@@ -31,23 +26,15 @@ class Mario:
             pass
     def __str__(self):
         return "Hi! I am " + self.name + ". I have " + str(self.lives) + " lives left and " + str(self.coins) + " coins."
-    # the following method is provided to you
     def __eq__(self, other):
         return (self.name == other.name and
                 self.lives == other.lives and
                 self.coins == other.coins and
                 self.isAlive == other.isAlive)
-
-    # the following method is provided to you
     def __repr__(self):
         return f"Mario({self.name})"
 
-
-##########################################################
-
-
 class Bowser:
-
     def __init__(self, name):
         self.name = name
         self.lives = 5
@@ -61,19 +48,12 @@ class Bowser:
             self.isAlive = False
     def __str__(self):
         return "Hi! I am " + self.name + " and I have " + str(self.lives) + " lives left."
-    # the following method is provided to you
     def __eq__(self, other):
         return (self.name == other.name and
                 self.lives == other.lives and
                 self.isAlive == other.isAlive)
-
-    # the following method is provided to you
     def __repr__(self):
         return f"Bowser({self.name})"
-
-
-##########################################################
-
 
 class World:
     def __init__(self, name, bowser, characters=None):
